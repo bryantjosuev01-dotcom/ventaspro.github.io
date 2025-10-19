@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="diseño/diseño.css">
+</head>
+<body>
+    <button id="musicControl">🔊 Pausa Música</button>
+
+    <audio id="miAudio" src="musica/musica.mp3" loop></audio>
+    <script>
+        const audio = document.getElementById("miAudio");
+const musicControl = document.getElementById("musicControl");
+
+window.addEventListener("load", () => {
+    audio.play().catch(() => {
+        // Si el autoplay está bloqueado, dejamos que el usuario lo reproduzca
+        musicControl.textContent = "🔊 Reproducir Música";
+    });
+});
+
+// Botón para pausar/reproducir
+musicControl.addEventListener("click", () => {
+    if(audio.paused){
+        audio.play();
+        musicControl.textContent = "🔊 Pausa Música";
+    } else {
+        audio.pause();
+        musicControl.textContent = "▶️ Reproducir Música";
+    }
+});
+    </script>
+
+    <header>
+        <h1>✨ Que desea obtener?✨</h1>
+        <p>Contacta conmigo al <a href="https://wa.me/50588854801" target="_blank">+505 8885 4801</a></p>
+    </header>
+
+    <main class="productos">
+        <!-- -->
+        <div class="card">
+            <img src="imagenes/reloj_audifonos.jpeg" alt="Producto 1">
+            <img src="imagenes/reloj_audifonos2.jpg" alt="Producto 1">
+            <h2>Reloj inteligente V17 Classic</h2>
+            <p>Un reloj inteligente resistente al agua IP67 con 7 correas intercambiables, auriculares, una gran pantalla AMOLED <br>
+                y funciones como contador de pasos, monitorización de la frecuencia cardíaca y monitorización del sueño. <br>
+                 Es resistente al polvo y al agua, ideal para el uso diario y el entrenamiento. Su gran esfera ofrece una pantalla <br>
+                  nítida y fácil de leer, mientras que el reloj registra tus pasos, monitoriza la frecuencia cardíaca y analiza tus <br>
+                   patrones de sueño para ayudarte a alcanzar tus objetivos de salud y fitness..</p>
+            <span class="precio">C$950</span>
+        </div>
+
+        <!-- Reloj inteligente set completo modelo -->
+        <div class="card">
+            <img src="imagenes/reloj.jpeg" alt="Producto 2">
+            <h2>S10 PRO MAX</h2>
+            <p>Este es un set completo de 7 fajas, ideal y adecuado para un reloj inteligente. <br> Con virtudes que es mejor descubrir por si mismo al adquirirlo!</p>
+            <span class="precio">C$750</span>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card">
+            <img src="imagenes/smart watch.jpeg" alt="Producto 3">
+            <h2>SMART WATCH</h2>
+            <p>Reloj inteligente</p>
+            <span class="precio">C$500</span>
+        </div>
+        <div class="card">
+            <img src="imagenes/termo.jpeg" alt="Producto 4">
+            <img src="imagenes/termo2.jpeg" alt="Producto 4">
+            <h2> TERMO STANLEY</h2>
+            <p> Termo que ademas de sus colores es ideal para cualquier lugar.</p>
+            <span class="precio">C$ 550</span>
+        </div>
+        <div class="card"">
+            <img src="imagenes/auricular.jpeg" alt="Producto 5">
+            <h2>AURICULAR SAMSUNG</h2>
+            <p>Auriculares samsung</p>
+            <span class="precio">C$500</span>
+        </div>
+        <div class="card"">
+            <img src="imagenes/audiM1.jpeg" alt="Producto 6">
+            <img src="imagenes/audiM2.jpeg" alt="Producto 6">
+            <img src="imagenes/audiM3.jpeg" alt="Producto 6">
+            <h2>AURICULAR PERSONALIZADO</h2>
+            <p>Auriculares con diferentes tipos de personajes conocidos</p>
+            <span class="precio">C$500</span>
+        </div>
+        
+            
+    </main>
+    <p><b> VISTA AMPLIADA DE LOS PRODUCTOS</b></p>
+<div class="vista-ampliada">
+    <img class="vista-img" src="imagenes/reloj_audifonos.jpeg" alt="Producto 1">
+    <img class="vista-img" src="imagenes/reloj_audifonos2.jpg" alt="Producto 1">
+    <img class="vista-img" src="imagenes/reloj.jpeg" alt="Producto 2">
+    <img class="vista-img" src="imagenes/smart watch.jpeg" alt="Producto 3">
+    <img class="vista-img" src="imagenes/termo.jpeg" alt="Producto 4">
+    <img class="vista-img" src="imagenes/termo2.jpeg" alt="Producto 4">
+    <img class="vista-img" src="imagenes/auricular.jpeg" alt="Producto 5">
+    <img class="vista-img" src="imagenes/audiM1.jpeg" alt="Producto 6">
+    <img class="vista-img" src="imagenes/audiM2.jpeg" alt="Producto 6">
+    <img class="vista-img" src="imagenes/audiM3.jpeg" alt="Producto 6">
+</div>
+
+    <footer>
+        <p>📞 Contáctame por WhatsApp: <a href="https://wa.me/50588854801" target="_blank">+505 8885 4801</a></p>
+       
+    </footer>
+
+    <script src="java/javas.js"></script>
+</body>
+</html>
