@@ -93,7 +93,6 @@ header a {
     height: auto;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    display: block;
 }
 
 .vista-ampliada-container {
@@ -104,6 +103,9 @@ header a {
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     background-color: #fff;
+}
+.vista-ampliada img.active {
+    display: block;
 }
 .boton {
     position: absolute;
