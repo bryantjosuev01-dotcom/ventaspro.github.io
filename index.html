@@ -31,23 +31,20 @@ musicControl.addEventListener("click", () => {
         musicControl.textContent = "▶️ Reproducir Música";
     }
 });
-        let indice = 0;
+let indice = 0;
 const imagenes = document.querySelectorAll(".vista-img");
 const total = imagenes.length;
 
-document.querySelector(".next").addEventListener("click", () => {
-    cambiarImagen(1);
-});
-
-document.querySelector(".prev").addEventListener("click", () => {
-    cambiarImagen(-1);
-});
-
+// función para cambiar de imagen
 function cambiarImagen(direccion) {
     imagenes[indice].classList.remove("active");
-    indice = (indice + direccion + total) % total;
+    indice = (indice + direccion + total) % total; // recorre en bucle
     imagenes[indice].classList.add("active");
 }
+
+// botones de navegación
+document.querySelector(".next").addEventListener("click", () => cambiarImagen(1));
+document.querySelector(".prev").addEventListener("click", () => cambiarImagen(-1));
     </script>
 
     <header>
