@@ -32,25 +32,23 @@ musicControl.addEventListener("click", () => {
     }
 });
 document.addEventListener("DOMContentLoaded", () => {
+    const contenedor = document.querySelector("#carrusel-productos");
+    const imagenes = contenedor.querySelectorAll(".slide");
     let indice = 0;
-    const imagenes = document.querySelectorAll(".vista-img");
-    const total = imagenes.length;
 
-    // Mostrar solo la primera imagen
-    imagenes.forEach((img, i) => {
-        img.style.display = i === 0 ? "block" : "none";
-    });
+    // Muestra la primera imagen
+    imagenes[indice].classList.add("activa");
 
     // Función para cambiar de imagen
-    function cambiarImagen(direccion) {
-        imagenes[indice].style.display = "none";
-        indice = (indice + direccion + total) % total;
-        imagenes[indice].style.display = "block";
+    function cambiar(direccion) {
+        imagenes[indice].classList.remove("activa");
+        indice = (indice + direccion + imagenes.length) % imagenes.length;
+        imagenes[indice].classList.add("activa");
     }
 
-    // Eventos de botones
-    document.querySelector(".next").addEventListener("click", () => cambiarImagen(1));
-    document.querySelector(".prev").addEventListener("click", () => cambiarImagen(-1));
+    // Botones
+    contenedor.querySelector(".next").addEventListener("click", () => cambiar(1));
+    contenedor.querySelector(".prev").addEventListener("click", () => cambiar(-1));
 });
     </script>
 
@@ -129,18 +127,18 @@ document.addEventListener("DOMContentLoaded", () => {
     <p><b> VISTA AMPLIADA DE LOS PRODUCTOS</b></p>
 <div class="vista-ampliada-container">
 <div class="vista-ampliada">
-    <img class="vista-img" src="relojaudifonos.jpeg" alt="Producto 1">
-    <img class="vista-img" src="relojaudifonos2.jpg" alt="Producto 1">
-    <img class="vista-img" src="reloj.jpeg" alt="Producto 2">
-    <img class="vista-img" src="smartwatch2.jpeg" alt="Producto 3">
-    <img class="vista-img" src="termo.jpeg" alt="Producto 4">
-    <img class="vista-img" src="termo2.jpeg" alt="Producto 4">
-    <img class="vista-img" src="auricular.jpeg" alt="Producto 5">
-    <img class="vista-img" src="audiM1.jpeg" alt="Producto 6">
-    <img class="vista-img" src="audiM2.jpeg" alt="Producto 6">
-    <img class="vista-img" src="audiM3.jpeg" alt="Producto 6">
-    <img src="camarajt.jpeg" alt="Producto 7">
-     <img src="Budsair.jpeg" alt="Producto 8">
+    <img class="slide" src="relojaudifonos.jpeg" alt="Producto 1">
+    <img class="slide" src="relojaudifonos2.jpg" alt="Producto 1">
+    <img class="slide" src="reloj.jpeg" alt="Producto 2">
+    <img class="slide" src="smartwatch2.jpeg" alt="Producto 3">
+    <img class="slide" src="termo.jpeg" alt="Producto 4">
+    <img class="slide" src="termo2.jpeg" alt="Producto 4">
+    <img class="slide" src="auricular.jpeg" alt="Producto 5">
+    <img class="slide" src="audiM1.jpeg" alt="Producto 6">
+    <img class="slide" src="audiM2.jpeg" alt="Producto 6">
+    <img class="slide" src="audiM3.jpeg" alt="Producto 6">
+    <img  class="slide" src="camarajt.jpeg" alt="Producto 7">
+     <img  class="slide" src="Budsair.jpeg" alt="Producto 8">
 </div>
 <button class="boton prev">&#10094;</button>
 <button class="boton next">&#10095;</button>
