@@ -31,20 +31,27 @@ musicControl.addEventListener("click", () => {
         musicControl.textContent = "▶️ Reproducir Música";
     }
 });
-let indice = 0;
-const imagenes = document.querySelectorAll(".vista-img");
-const total = imagenes.length;
+document.addEventListener("DOMContentLoaded", () => {
+    let indice = 0;
+    const imagenes = document.querySelectorAll(".vista-img");
+    const total = imagenes.length;
 
-// función para cambiar de imagen
-function cambiarImagen(direccion) {
-    imagenes[indice].classList.remove("active");
-    indice = (indice + direccion + total) % total; // recorre en bucle
-    imagenes[indice].classList.add("active");
-}
+    // Mostrar solo la primera imagen
+    imagenes.forEach((img, i) => {
+        img.style.display = i === 0 ? "block" : "none";
+    });
 
-// botones de navegación
-document.querySelector(".next").addEventListener("click", () => cambiarImagen(1));
-document.querySelector(".prev").addEventListener("click", () => cambiarImagen(-1));
+    // Función para cambiar de imagen
+    function cambiarImagen(direccion) {
+        imagenes[indice].style.display = "none";
+        indice = (indice + direccion + total) % total;
+        imagenes[indice].style.display = "block";
+    }
+
+    // Eventos de botones
+    document.querySelector(".next").addEventListener("click", () => cambiarImagen(1));
+    document.querySelector(".prev").addEventListener("click", () => cambiarImagen(-1));
+});
     </script>
 
     <header>
