@@ -97,7 +97,7 @@ header a {
 
 .vista-ampliada-container {
     position: relative;
-    max-width: 600px; /* tamaño máximo del carrusel */
+    max-width: 700px; /* tamaño máximo del carrusel */
     margin: 40px auto;
     border-radius: 10px;
     overflow: hidden;
