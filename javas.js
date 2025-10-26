@@ -11,20 +11,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }, i * 150);
     });
 });
-let indice = 0;
-const imagenes = document.querySelectorAll(".vista-img");
-const total = imagenes.length;
 
-document.querySelector(".next").addEventListener("click", () => {
-    cambiarImagen(1);
-});
-
-document.querySelector(".prev").addEventListener("click", () => {
-    cambiarImagen(-1);
-});
-
-function cambiarImagen(direccion) {
-    imagenes[indice].classList.remove("active");
-    indice = (indice + direccion + total) % total;
-    imagenes[indice].classList.add("active");
-}
