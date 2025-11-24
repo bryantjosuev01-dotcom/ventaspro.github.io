@@ -13,7 +13,6 @@ body {
     padding-top: 80px; /* Espacio para la navbar fija */
 }
 
-
 /* ===========================
     NAVBAR
 =========================== */
@@ -57,7 +56,7 @@ body {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    padding: 12px 0; /* Añadido para mejor área de hover */
+    padding: 12px 0;
     display: block;
 }
 
@@ -71,25 +70,19 @@ body {
     cursor: pointer;
 }
 
-
 /* ===========================
-    ESTILOS MENÚ DESPLEGABLE (Dropdown)
+    DROPDOWN
 =========================== */
-
-/* Contenedor principal del menú */
 .dropdown {
     position: relative; 
     display: block; 
 }
 
-/* Oculta el submenú y define su estilo */
 .dropdown-menu {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: absolute;
     top: 100%; 
     left: 0; 
-    
-    /* Estilos de apariencia */
     background-color: #1e1e1e; 
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); 
@@ -99,7 +92,6 @@ body {
     margin: 0;
 }
 
-/* Estilos para los elementos y enlaces dentro del submenú */
 .dropdown-menu li {
     display: block; 
 }
@@ -113,25 +105,21 @@ body {
     font-size: 16px; 
 }
 
-/* Efecto al pasar el ratón por los enlaces del submenú */
 .dropdown-menu a:hover {
     background-color: #333333; 
     color: #ffcc00;
 }
 
-/* REGLA CLAVE: Muestra el submenú cuando el ratón está sobre el contenedor principal */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Para mantener el color hover en el propio botón 'Productos' cuando el menú está abierto */
 .dropdown:hover > a {
     color: #ffcc00;
 }
 
-
 /* ===========================
-    INICIO (PÁGINA PRINCIPAL)
+    INICIO
 =========================== */
 .inicio-header {
     text-align: center;
@@ -172,11 +160,9 @@ body {
     background: #d4aa00;
 }
 
-
 /* ===========================
     GRID DE PRODUCTOS
 =========================== */
-
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -185,7 +171,7 @@ body {
 }
 
 .category-title {
-    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    grid-column: 1 / -1; 
     text-align: left;
     margin-top: 20px;
     padding-left: 20px;
@@ -226,20 +212,16 @@ body {
     color: #2b8a3e;
 }
 
-
 /* ===========================
-    MODAL DEL PRODUCTO
+    MODAL PRODUCTO
 =========================== */
-
 .modal {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.65);
-    /* Cambiado de justify-content/align-items a 'display: flex' en JS para que esto funcione */
-    display: flex; 
     justify-content: center;
     align-items: center;
     z-index: 2000;
@@ -253,6 +235,7 @@ body {
     border-radius: 12px;
     position: relative;
     animation: aparecer 0.25s ease-out;
+    text-align: center;
 }
 
 @keyframes aparecer {
@@ -260,14 +243,21 @@ body {
     to { opacity: 1; transform: scale(1); }
 }
 
+#modalImagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #modalImagenes img {
-    /* Estilo para las imágenes dentro del modal */
-    width: 100%;
-    max-height: 400px;
-    object-fit: contain;
     border-radius: 8px;
-    margin-bottom: 15px;
-    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#modalImagenes img:hover {
+    transform: scale(1.05);
 }
 
 .modal-contenido h2 {
@@ -288,11 +278,9 @@ body {
     cursor: pointer;
 }
 
-
 /* ===========================
     FOOTER
 =========================== */
-
 footer {
     margin-top: 40px;
     text-align: center;
