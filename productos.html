@@ -6,12 +6,11 @@
     <title>Productos | Mi Tienda</title>
     <link rel="stylesheet" href="diseño.css">
 </head>
-
 <body>
 
 <nav class="navbar">
     <div class="nav-logo" onclick="window.location.href='index.html'">
-        <img src="logot.png" alt="Logo">
+        <img src="tu_logo.png" alt="Logo">
         <span class="nav-title">Mi Tienda</span>
     </div>
 
@@ -24,13 +23,12 @@
                 <li><a href="#accesorios">Accesorios</a></li>
             </ul>
         </li>
-        </ul>
+    </ul>
 
     <div class="nav-actions">
         <span class="search-icon">🔍</span>
     </div>
 </nav>
-
 
 <header>
     <h1>🛍 Nuestros Productos</h1>
@@ -105,6 +103,7 @@
 
 </main>
 
+<!-- Modal -->
 <div id="modalProducto" class="modal">
     <div class="modal-contenido">
         <span class="cerrar close-btn" onclick="cerrarModal()">&times;</span>
@@ -112,13 +111,12 @@
         <h2 id="modalTitulo"></h2>
         <p id="modalDescripcion"></p>
 
-        <div id="modalImagenes"></div>
+        <div id="modalImagenes" class="slider"></div>
 
         <h3 id="modalPrecio" style="margin-top:15px;"></h3>
     </div>
 </div>
 
 <script src="javas.js"></script>
-
 </body>
 </html>
