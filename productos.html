@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Mi Tienda</title>
+    <link rel="stylesheet" href="diseño.css">
+</head>
+
+<body>
+
+<!-- ⭐ BARRA DE NAVEGACIÓN -->
+<nav class="navbar">
+    <div class="nav-logo" onclick="window.location.href='index.html'">
+        <img src="tu_logo.png" alt="Logo">
+        <span class="nav-title">Mi Tienda</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" class="active">Productos</a></li>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Sobre Nosotros</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+        <span class="search-icon">🔍</span>
+    </div>
+</nav>
+
+<!-- ⭐ CONTENIDO PRINCIPAL -->
+<header>
+    <h1>🛍 Nuestros Productos</h1>
+    <p>Haz clic en un producto para ver más detalles 📦</p>
+</header>
+
+<main class="productos">
+
+    <!-- ⭐ Cada card tiene un ID para abrir su modal -->
+    <div class="card" onclick="mostrarProducto(1)">
+        <img src="relojaudifonos.jpeg" alt="Reloj V17">
+        <h2>Reloj V17 Classic</h2>
+        <span class="precio">C$950</span>
+    </div>
+
+    <div class="card" onclick="mostrarProducto(2)">
+        <img src="reloj.jpeg" alt="S10">
+        <h2>S10 PRO MAX</h2>
+        <span class="precio">C$750</span>
+    </div>
+
+    <div class="card" onclick="mostrarProducto(3)">
+        <img src="smartwatch2.jpeg" alt="T500">
+        <h2>SMART WATCH T500</h2>
+        <span class="precio">C$550</span>
+    </div>
+
+    <div class="card" onclick="mostrarProducto(4)">
+        <img src="termo.jpeg" alt="Termo">
+        <h2>Termo Stanley</h2>
+        <span class="precio">C$700</span>
+    </div>
+
+    <div class="card" onclick="mostrarProducto(5)">
+        <img src="auricular.jpeg" alt="Samsung">
+        <h2>Auricular Samsung</h2>
+        <span class="precio">C$500</span>
+    </div>
+
+    <div class="card" onclick="mostrarProducto(6)">
+        <img src="audiM1.jpeg" alt="Auriculares">
+        <h2>Auricular Personalizado</h2>
+        <span class="precio">C$500</span>
+    </div>
+
+    <div class="card" onclick="mostrarProducto(7)">
+        <img src="camarajt.jpeg" alt="Cámara">
+        <h2>Cámara de Vigilancia</h2>
+        <span class="precio">C$800</span>
+    </div>
+
+    <div class="card" onclick="mostrarProducto(8)">
+        <img src="Budsair.jpeg" alt="Buds Air">
+        <h2>Auricular Buds Air 2</h2>
+        <span class="precio">C$550</span>
+    </div>
+
+    <div class="card" onclick="mostrarProducto(9)">
+        <img src="M90AU.jpeg" alt="M90 Pro">
+        <h2>Auricular M90 Pro</h2>
+        <span class="precio">C$450</span>
+    </div>
+
+    <div class="card" onclick="mostrarProducto(10)">
+        <img src="mochila.jpeg" alt="Mochila">
+        <h2>Mochila SwissGear</h2>
+        <span class="precio">C$750</span>
+    </div>
+
+</main>
+
+<!-- ⭐ MODAL DE PRODUCTO -->
+<div id="modalProducto" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+
+        <h2 id="modalTitulo"></h2>
+        <p id="modalDescripcion"></p>
+
+        <div id="modalImagenes"></div>
+
+        <h3 id="modalPrecio" style="margin-top:15px;"></h3>
+    </div>
+</div>
+
+<!-- ⭐ SCRIPTS -->
+<script src="javas.js"></script>
+
+</body>
+</html>
