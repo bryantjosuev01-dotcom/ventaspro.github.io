@@ -1,5 +1,5 @@
 /* ===========================
-   RESET
+    RESET
 =========================== */
 * {
     margin: 0;
@@ -15,7 +15,7 @@ body {
 
 
 /* ===========================
-   NAVBAR
+    NAVBAR
 =========================== */
 .navbar {
     position: fixed;
@@ -57,9 +57,12 @@ body {
     color: white;
     text-decoration: none;
     font-size: 16px;
+    padding: 12px 0; /* Añadido para mejor área de hover */
+    display: block;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: #ffcc00;
 }
 
@@ -70,7 +73,65 @@ body {
 
 
 /* ===========================
-   INICIO (PÁGINA PRINCIPAL)
+    ESTILOS MENÚ DESPLEGABLE (Dropdown)
+=========================== */
+
+/* Contenedor principal del menú */
+.dropdown {
+    position: relative; 
+    display: block; 
+}
+
+/* Oculta el submenú y define su estilo */
+.dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; 
+    left: 0; 
+    
+    /* Estilos de apariencia */
+    background-color: #1e1e1e; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5); 
+    z-index: 1001; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para los elementos y enlaces dentro del submenú */
+.dropdown-menu li {
+    display: block; 
+}
+
+.dropdown-menu a {
+    color: white; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left; 
+    font-size: 16px; 
+}
+
+/* Efecto al pasar el ratón por los enlaces del submenú */
+.dropdown-menu a:hover {
+    background-color: #333333; 
+    color: #ffcc00;
+}
+
+/* REGLA CLAVE: Muestra el submenú cuando el ratón está sobre el contenedor principal */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Para mantener el color hover en el propio botón 'Productos' cuando el menú está abierto */
+.dropdown:hover > a {
+    color: #ffcc00;
+}
+
+
+/* ===========================
+    INICIO (PÁGINA PRINCIPAL)
 =========================== */
 .inicio-header {
     text-align: center;
@@ -112,9 +173,8 @@ body {
 }
 
 
-
 /* ===========================
-   GRID DE PRODUCTOS
+    GRID DE PRODUCTOS
 =========================== */
 
 .product-grid {
@@ -122,6 +182,15 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
     padding: 40px;
+}
+
+.category-title {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 28px;
+    color: #1e1e1e;
 }
 
 .product-card {
@@ -145,7 +214,7 @@ body {
     margin-bottom: 12px;
 }
 
-.product-card h3 {
+.product-card h2 {
     font-size: 20px;
     margin-bottom: 6px;
     color: #222;
@@ -158,11 +227,8 @@ body {
 }
 
 
-
-
-
 /* ===========================
-   MODAL DEL PRODUCTO
+    MODAL DEL PRODUCTO
 =========================== */
 
 .modal {
@@ -172,12 +238,14 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.65);
+    /* Cambiado de justify-content/align-items a 'display: flex' en JS para que esto funcione */
+    display: flex; 
     justify-content: center;
     align-items: center;
     z-index: 2000;
 }
 
-.modal-content {
+.modal-contenido {
     background: white;
     width: 90%;
     max-width: 700px;
@@ -189,21 +257,25 @@ body {
 
 @keyframes aparecer {
     from { opacity: 0; transform: scale(0.8); }
-    to   { opacity: 1; transform: scale(1); }
+    to { opacity: 1; transform: scale(1); }
 }
 
-.modal-content img {
+#modalImagenes img {
+    /* Estilo para las imágenes dentro del modal */
     width: 100%;
+    max-height: 400px;
+    object-fit: contain;
     border-radius: 8px;
     margin-bottom: 15px;
+    display: block;
 }
 
-.modal-content h2 {
+.modal-contenido h2 {
     margin-bottom: 10px;
     color: #222;
 }
 
-.modal-content p {
+.modal-contenido p {
     color: #555;
     margin-bottom: 20px;
 }
@@ -217,9 +289,8 @@ body {
 }
 
 
-
 /* ===========================
-   FOOTER
+    FOOTER
 =========================== */
 
 footer {
