@@ -286,4 +286,6 @@ footer {
     background: #1e1e1e;
     color: white;
     position: fixed;
+    width: 100%;
+    bottom: 0;
 }
