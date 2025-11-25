@@ -278,9 +278,9 @@ body {
     cursor: pointer;
 }
 
-<!--Pie de pagina informacion pertinente de contacto-->
+/*Pie de pagina informacion pertinente de contacto*/
 footer {
-    margin-top: 10px;
+    margin-top: 70px;
     text-align: center;
     padding: 20px;
     background: #1e1e1e;
