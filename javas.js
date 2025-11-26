@@ -31,20 +31,25 @@ function mostrarProducto(cardElement) {
 
         contenedorImagenes.appendChild(imgElement);
     });
-    const primeraImagen = imagenesArray[0].trim();
-    const urlImagen = window.location.origin + "/" + primeraImagen;
+   const primeraImagen = imagenesArray[0].trim();
 
-    const numero = "50588854801"; // ← tu número
+   
+    const usuario = "bryantjosuev01-dotcom";
+    const repo = "ventaspro.github.io";
+
+    const urlImagen = `https://${usuario}.github.io/${repo}/${primeraImagen}`;
+
+    // 🔥 Mensaje WhatsApp con imagen incluida
+    const numero = "50588854801";
     const mensaje = 
-`Hola, quiero información sobre el producto: ${titulo}.
-Precio: ${precio}.
-Descripción: ${descripcion}.
+`Hola, quiero información sobre el producto: ${titulo}
+Precio: ${precio}
+Descripción: ${descripcion}
 Imagen del producto: ${urlImagen}`;
 
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
     document.getElementById("btnWhatsappModal").href = url;
-
     document.getElementById("modalProducto").style.display = "flex"; 
 }
 
