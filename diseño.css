@@ -255,6 +255,7 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
     transition: transform 0.2s;
+     z-index: 5;
 }
 
 #modalImagenes img:hover {
@@ -280,6 +281,7 @@ body {
     z-index: 20;
     border-radius: 50%; 
     padding: 4px 8px;   /* opcional, más área clickeable */
+    background: rgba(255,255,255,0.8);
 }
 .btn-wasap {
     display: inline-block;
