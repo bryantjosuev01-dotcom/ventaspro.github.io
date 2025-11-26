@@ -239,7 +239,7 @@ body {
     animation: aparecer 0.25s ease-out;
     text-align: center;
       max-height: 90vh; /* ⚡ limita altura del contenido al 90% de la ventana */
-    overflow-y: auto; 
+    overflow-y: scroll; 
 }
 
 @keyframes aparecer {
