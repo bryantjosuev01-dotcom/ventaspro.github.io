@@ -216,16 +216,17 @@ body {
     MODAL PRODUCTO
 =========================== */
 .modal {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 70%;
-    height: 70%;
-    background: rgba(0,0,0,0.65);
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-    overflow: hidden;
+    display: none; 
+    position: fixed; /* CRUCIAL: Se posiciona respecto a la ventana del navegador */
+    top: 0; 
+    left: 0;
+    width: 100%; /* Cubre todo el ancho de la ventana */
+    height: 100%; /* Cubre todo el alto de la ventana */
+    background: rgba(0,0,0,0.65); /* Fondo semitransparente oscuro */
+    justify-content: center; /* Centra horizontalmente el contenido interno (si display: flex) */
+    align-items: center; /* Centra verticalmente el contenido interno (si display: flex) */
+    z-index: 2000; /* Asegura que esté por encima de casi todo */
+    overflow: auto; /* Cambiado de hidden a auto para permitir scroll si el contenido es grande */
 }
 
 .modal-contenido {
