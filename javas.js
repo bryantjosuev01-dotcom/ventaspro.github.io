@@ -31,6 +31,11 @@ function mostrarProducto(cardElement) {
 
         contenedorImagenes.appendChild(imgElement);
     });
+    const numero = "50588854801"; // ← Cambia aquí tu número
+    const mensaje = `Hola, quiero información sobre el producto: ${titulo}. Precio: ${precio}. Descripción: ${descripcion}`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    document.getElementById("btnWhatsappModal").href = url;
 
     document.getElementById("modalProducto").style.display = "flex"; 
 }
