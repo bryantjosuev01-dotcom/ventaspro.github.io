@@ -43,9 +43,8 @@ function mostrarProducto(cardElement) {
     const numero = "50588854801";
     const mensaje = 
 `Hola, quiero información sobre el producto: ${titulo}
-Precio: ${precio}
-Descripción: ${descripcion}
-Imagen del producto: ${urlImagen}`;
+Imagen del producto: ${urlImagen}
+Precio: ${precio}`;
 
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
